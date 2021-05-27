@@ -1,7 +1,13 @@
 body {
   background-color: #FFFFFE;
   padding: 30px;
+  display:flex;
+  justify-content: center;
 }
+button, input[type=radio] {
+  cursor:pointer;
+}
+
 
 .container {
   width: 800px;
@@ -50,6 +56,12 @@ textarea {
   align-items: center;
   justify-content: space-around;
 }
+.tasteBtn__btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px rgba(0,0,0, 0.1);
+}
 
 .controlBox_save {
   width: 80px;
@@ -74,7 +86,7 @@ textarea {
   display: flex;
 }
 
-.pretitle_color {
+.preTitle_color {
   width: 50%;
   height: 100%;
   background-color: #D5E5F3;
@@ -83,11 +95,11 @@ textarea {
   align-items: center;
   justify-content: center;
 }
-.pretitle_content {
+.preTitle_content {
   width: 80%;
 }
 
-.pretaste {
+.preTaste {
   width: 50%;
   height: 100%;
   background-color:#F9F9F9;
@@ -95,7 +107,7 @@ textarea {
   align-items: center;
   justify-content: space-around;
 }
-.img {
+.preImg {
   width: 80px;
   height: 80px;
   background-color: cornflowerblue;
@@ -113,4 +125,30 @@ textarea {
 .controlBox_download button{
   width: 80px;
   box-shadow: 2px 2px 2px rgba(0,0,0, 0.1);
+}
+
+.imgBox {
+  width: 360px;
+  background-color: #FFFFFE;
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0,0,0, 0.1);
+
+  position:relative;
+  left: 410px;
+  top: -490px;
+
+
+}
+.img {
+  width: 65px;
+  height: 65px;
+  margin: 10px 10px;
+  background-color:cornflowerblue;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px rgba(0,0,0, 0.1);
+}
+
+.hidden {
+  display: none;
 }
