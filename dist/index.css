@@ -22,6 +22,9 @@ body {
 textarea {
   resize: none;
 }
+.sort {
+  display:flex;
+}
 
 
 
@@ -34,6 +37,7 @@ textarea {
   height: 40%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 .themeBtn {
   display: flex;
@@ -47,9 +51,7 @@ textarea {
   justify-content: space-around;
 }
 
-
-
-.control {
+.controlBox_save {
   width: 80px;
   height: 50px;
 
@@ -61,14 +63,54 @@ textarea {
   flex-direction: column;
   justify-content: space-between;
 }
-.control button {
+.controlBox_save button {
   box-shadow: 2px 2px 2px rgba(0,0,0, 0.1);
 }
-
 
 .preview {
   width: 860px;
   height: 350px;
-  background-color: #D5E5F3;
   box-shadow: 5px 5px 5px rgba(0,0,0, 0.1);
+  display: flex;
+}
+
+.pretitle_color {
+  width: 50%;
+  height: 100%;
+  background-color: #D5E5F3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pretitle_content {
+  width: 80%;
+}
+
+.pretaste {
+  width: 50%;
+  height: 100%;
+  background-color:#F9F9F9;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.img {
+  width: 80px;
+  height: 80px;
+  background-color: cornflowerblue;
+}
+
+.controlBox_download {
+  width: 80px;
+  height: 40px;
+  position:relative;
+  left: 910px;
+  top: -30px;
+  
+}
+
+.controlBox_download button{
+  width: 80px;
+  box-shadow: 2px 2px 2px rgba(0,0,0, 0.1);
 }
