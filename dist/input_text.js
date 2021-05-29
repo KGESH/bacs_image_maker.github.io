@@ -11,6 +11,7 @@ function paint() {
     preTitle.innerText = "" + title.value;
     preDescription.innerText = "" + description.value;
 }
+// 텍스트 정렬
 function sort() {
     var obj = document.getElementsByName("textAlign");
     for (var i = 0; i < obj.length; i++) {

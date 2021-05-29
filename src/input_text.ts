@@ -18,6 +18,7 @@ function paint():void {
   preDescription.innerText = `${description.value}`;
 }
 
+// 텍스트 정렬
 function sort():void {
   let obj:any = document.getElementsByName("textAlign");
   for (var i = 0; i < obj.length; i++) {
