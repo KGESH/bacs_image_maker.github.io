@@ -20,16 +20,16 @@
       <div class="sort">
         <div style="margin-right: 15px;">정렬</div>
         <div>
-          <input type="radio" name="sort" id="" checked>
-          <label for="">좌측</label>
+          <input type="radio" name="textAlign" value="left" checked>
+          <label for="a">좌측</label>
         </div>
         <div>
-          <input type="radio" name="sort" id="">
-          <label for="">가운데</label>
+          <input type="radio" name="textAlign" value="center">
+          <label for="b">가운데</label>
         </div>
         <div>
-          <input type="radio" name="sort" id="">
-          <label for="">우측</label>
+          <input type="radio" name="textAlign" value="right">
+          <label for="c">우측</label>
         </div>
       </div>
     </div>
@@ -55,9 +55,9 @@
         <div><button name="" id="" class="" value="">(추천색상)</button></div>
       </div>
       <div class="tasteBtn">
-        <button name="fruitIcon" id="fruitIcon__left" class="tasteBtn__btn" value="">그림1</button>
-        <button name="fruitIcon" id="fruitIcon__middle" class="tasteBtn__btn" value="">그림2</button>
-        <button name="fruitIcon" id="fruitIcon__right" class="tasteBtn__btn" value="">그림3</button>
+        <input type="file" name="fruitIcon" class="tasteBtn__btn fruitIcon__left" value="">그림1</input>
+        <input type="file" name="fruitIcon" class="tasteBtn__btn fruitIcon__middle" value="">그림2</input>
+        <input type="file" name="fruitIcon" class="tasteBtn__btn fruitIcon__right" value="">그림3</input>
       </div>
     </div>
   </div>
@@ -79,9 +79,9 @@
       </div>
     </div>
     <div class="preTaste">
-      <div class="preImg"></div>
-      <div class="preImg"></div>
-      <div class="preImg"></div>
+      <img class="preImg"></img>
+      <img class="preImg"></img>
+      <img class="preImg"></img>
     </div>
   </div>
 
@@ -102,16 +102,12 @@
 
 <!--
   추천 색상 -> 현재 색상을 추천 색상으로 저장 기능 추가
-
   적용 후 미리보기에서 
     (폰트 사이즈 조절 기능)
     (글 좌, 우, 가운데 정렬기능 추가)
     (글, 그림의 위치 수정기능 추가)
-
-
   임시 저장 시
     모든 내용은 storage에 저장 -> 다운로드 성공 시 삭제
-
   만약 이미지 버튼 이 눌리면 클릭 됬다고 이미지에 효과를 줌
   
 -->
@@ -119,7 +115,7 @@
   
   <script src="input_text.js"></script>
   <script src="fruit_icon.js"></script>
-  <script src="color_picker"></script>
+
 </div>
 </body>
 </html>
