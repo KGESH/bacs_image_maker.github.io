@@ -3,7 +3,20 @@ const title:any = document.getElementById("title"),
   save:any = document.getElementById("save"),
   preTitle:any = document.querySelector(".preTitle"),
   preDescription:any = document.querySelector(".preDescription");
-// title.style.textAlign = "left/center/right"
+
+function load() {
+  const localTitle:any = localStorage.getItem("localTitle");
+  const localDescription:any = localStorage.getItem("localDescription");
+  // localStorage에 저장되어 있으면 바로 화면에 출력
+  if (localTitle) { 
+    title.innerText = `${localTitle}`; 
+    preTitle.innerText = `${localTitle}`; 
+  }
+  if (localDescription) { 
+    description.innerText = `${localDescription}`; 
+    preDescription.innerText = `${localDescription}`; 
+  }
+}
 
 function paint():void {
   // 입력이 들어오면 localStorage에 저장
@@ -30,11 +43,8 @@ function sort():void {
 }
 
 function init_text():void {
-  const localTitle:any = localStorage.getItem("localTitle");
-  const localDescription:any = localStorage.getItem("localDescription");
   // localStorage에 저장되어 있으면 바로 화면에 출력
-  if (localTitle) { preTitle.innerText = `${localTitle}`; }
-  if (localDescription) { preDescription.innerText = `${localDescription}`; }
+  load();
 
   // (임시 저장) 버튼을 누르면 textarea에 작성한 내용 출력
   save.addEventListener("click", paint);

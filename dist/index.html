@@ -36,28 +36,30 @@
     <div class="coffeTaste">
       <div class="theme">
         <div>테마</div>
+        <!--
         <div class="themeBtn">
-        <div>
-          <input type="radio" name="theme" checked>
-          <label for="">label1</label>
+          <div>
+            <input type="radio" name="theme" checked>
+            <label for="">label1</label>
+          </div>
+          <div>
+            <input type="radio" name="theme">
+            <label for="">label2</label>
+          </div>
+          <div>
+            <input type="radio" name="theme">
+            <label for="">label3</label>
+          </div>
         </div>
-        <div>
-          <input type="radio" name="theme">
-          <label for="">label2</label>
-        </div>
-        <div>
-          <input type="radio" name="theme">
-          <label for="">label3</label>
-        </div>
-        </div>
-        <div><button name="" id="" class="" value="">(font컬러피커)</button></div>
-        <div><button name="" id="" class="" value="">(box컬러피커)</button></div>
-        <div><button name="" id="" class="" value="">(추천색상)</button></div>
+        -->
+        <div><div>배경 색상</div><input class="colorPicker" value="#3399FF80" data-jscolor="{}"></div>
+        <div><div>폰트 색상</div><input class="colorPicker" value="#3399FF80" data-jscolor="{}"></div>
+
       </div>
       <div class="tasteBtn">
-        <input type="file" name="fruitIcon" class="tasteBtn__btn fruitIcon__left" value="">그림1</input>
-        <input type="file" name="fruitIcon" class="tasteBtn__btn fruitIcon__middle" value="">그림2</input>
-        <input type="file" name="fruitIcon" class="tasteBtn__btn fruitIcon__right" value="">그림3</input>
+        <input type="file" name="fruitIcon" class="tasteBtn__btn fruitIcon__left" value=""/>
+        <input type="file" name="fruitIcon" class="tasteBtn__btn fruitIcon__middle" value=""/>
+        <input type="file" name="fruitIcon" class="tasteBtn__btn fruitIcon__right" value=""/>
       </div>
     </div>
   </div>
@@ -89,16 +91,6 @@
     <button id="download" class="download">저장</button>
   </div>
 
-  <div class="imgBox hidden">
-    <button class="img"></button>
-    <button class="img"></button>
-    <button class="img"></button>
-    <button class="img"></button>
-    <button class="img"></button>
-    <button class="img"></button>
-    <button class="img"></button>
-  </div>
-
 
 <!--
   추천 색상 -> 현재 색상을 추천 색상으로 저장 기능 추가
@@ -115,6 +107,8 @@
   
   <script src="input_text.js"></script>
   <script src="fruit_icon.js"></script>
+  <script src="color_picker.js"></script>
+  <script src="color.js"></script>
 
 </div>
 </body>
