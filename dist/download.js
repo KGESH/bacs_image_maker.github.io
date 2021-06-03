@@ -19,3 +19,17 @@ $(function(){
     } 
     }
 });
+
+function remove_local() {
+    localStorage.removeItem("localTitle");
+    localStorage.removeItem("localDescription");
+    localStorage.removeItem("backgroundColor");
+    localStorage.removeItem("fontColor");
+}
+
+function init_download() {
+    const downloadBtn = document.getElementById("download");
+    downloadBtn.addEventListener("click", remove_local);
+}
+
+init_download();
