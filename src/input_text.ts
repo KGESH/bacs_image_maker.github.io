@@ -52,3 +52,4 @@ function init_text():void {
 // sort 기능을 추가해야 함
 
 init_text();
+
