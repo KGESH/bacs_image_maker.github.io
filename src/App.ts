@@ -4,8 +4,9 @@ import FruitIcon from "./FruitIcon";
 
 const App = () => {
   InputText();
-  FruitIcon();
   ColorHandler();
+  FruitIcon();
 }
 
-App();
+window.addEventListener('load', App);
+

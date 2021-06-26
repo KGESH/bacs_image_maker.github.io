@@ -1,25 +1,27 @@
 const FruitIcon = () => {
-  const fruitIcons = document.getElementsByClassName("tasteBtn__btn");
-  const imgs = document.getElementsByClassName("preImg");
+  const fruitIconList = document.getElementsByClassName("taste_file_selector__input");
+  const imageList = document.getElementsByClassName("preview_icon");
 
-  const handleImageButton = () => {
-    for (let i = 0; i < fruitIcons.length; i++) {
-      fruitIcons[i].addEventListener('change', (event: any) => {
-        const file = event.target.files[0];
-        const reader = new FileReader();
-        const img = imgs[i] as HTMLImageElement;
+  const attachFileSelectListener = () => {
+    for (let i = 0; i < fruitIconList.length; i++) {
+      fruitIconList[i].addEventListener('change', (event: Event) => {
+        const target: HTMLInputElement = event.target as HTMLInputElement;
+        const fileList: FileList | null = target.files;
+        const reader: FileReader = new FileReader();
+        const image: HTMLImageElement = imageList[i] as HTMLImageElement;
         
         reader.addEventListener('load', () => {
-          img.src = <string>reader.result;
+          image.src = <string>reader.result;
         });
 
-        if (file) {
-          reader.readAsDataURL(file);
+        if (fileList !== null) {
+          reader.readAsDataURL(fileList[0]);
         }
       });
     }
   }
 
+  attachFileSelectListener();
 }
 
 export default FruitIcon;
