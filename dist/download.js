@@ -1,10 +1,7 @@
 $(function(){
     $("#download").on("click", function(){
         // 캡쳐 라이브러리를 통해서 canvas 오브젝트를 받고 이미지 파일로 리턴한다.
-        html2canvas(document.querySelector("#preview_container"), {
-            allowTaint: true,
-            foreignObjectRendering: true
-        })
+        html2canvas(document.querySelector("#preview_container"))
         .then(canvas => {
             console.log(canvas);
                 saveAs(canvas.toDataURL('image/png'), "capture-test.png");
