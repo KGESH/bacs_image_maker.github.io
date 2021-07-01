@@ -1,10 +1,13 @@
 const FruitIcon = () => {
-  const fruitIconList = document.getElementsByClassName("taste_file_selector__input");
+  const iconFileList = document.getElementsByClassName("taste_file_selector__input");
+  const iconNameList = document.getElementsByClassName("taste_icon_name__input");
+  const preIconNameList = document.getElementsByClassName("preview_icon_text");
   const imageList = document.getElementsByClassName("preview_icon");
 
+  
   const attachFileSelectListener = () => {
-    for (let i = 0; i < fruitIconList.length; i++) {
-      fruitIconList[i].addEventListener('change', (event: Event) => {
+    for (let i = 0; i < iconFileList.length; i++) {
+      iconFileList[i].addEventListener('change', (event: Event) => {
         const target: HTMLInputElement = event.target as HTMLInputElement;
         const fileList: FileList | null = target.files;
         const reader: FileReader = new FileReader();
@@ -17,6 +20,13 @@ const FruitIcon = () => {
         if (fileList !== null) {
           reader.readAsDataURL(fileList[0]);
         }
+      });
+
+
+      iconNameList[i].addEventListener('change', (event: Event) => {
+        const target: HTMLInputElement = event.target as HTMLInputElement;
+        const iconName = preIconNameList[i] as HTMLInputElement;
+        iconName.innerText = target.value;
       });
     }
   }

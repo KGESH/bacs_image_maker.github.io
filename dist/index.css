@@ -150,3 +150,7 @@ textarea {
   flex-direction: column;
   align-items: center;
 }
+
+.taste_select_item {
+  display: flex;
+}

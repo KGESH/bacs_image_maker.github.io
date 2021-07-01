@@ -107,11 +107,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 var FruitIcon = function () {
-    var fruitIconList = document.getElementsByClassName("taste_file_selector__input");
+    var iconFileList = document.getElementsByClassName("taste_file_selector__input");
+    var iconNameList = document.getElementsByClassName("taste_icon_name__input");
+    var preIconNameList = document.getElementsByClassName("preview_icon_text");
     var imageList = document.getElementsByClassName("preview_icon");
     var attachFileSelectListener = function () {
         var _loop_1 = function (i) {
-            fruitIconList[i].addEventListener('change', function (event) {
+            iconFileList[i].addEventListener('change', function (event) {
                 var target = event.target;
                 var fileList = target.files;
                 var reader = new FileReader();
@@ -123,8 +125,15 @@ var FruitIcon = function () {
                     reader.readAsDataURL(fileList[0]);
                 }
             });
+            iconNameList[i].addEventListener('change', function (event) {
+                var target = event.target;
+                console.log("target : " + target.value);
+                var iconName = preIconNameList[i];
+                iconName.innerText = target.value;
+                //preIconNameList[i].nodeValue = target.value;
+            });
         };
-        for (var i = 0; i < fruitIconList.length; i++) {
+        for (var i = 0; i < iconFileList.length; i++) {
             _loop_1(i);
         }
     };

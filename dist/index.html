@@ -57,9 +57,17 @@
 
       </div>
       <div class="taste_select_wrapper">
-        <input type="file" class="taste_file_selector__input fruit_icon_left" value=""/>
-        <input type="file" class="taste_file_selector__input fruit_icon_middle" value=""/>
-        <input type="file" class="taste_file_selector__input fruit_icon_right" value=""/>
+        <div class="taste_select_item">
+          <input type="file" class="taste_file_selector__input taste_icon_left" value=""/>
+          <input type="text" placeholder="input icon name" class="taste_icon_name__input taste_name_left">
+        </div>
+        <div class="taste_select_item">
+          <input type="file" class="taste_file_selector__input taste_icon_middle" value=""/>
+          <input type="text" placeholder="input icon name" class="taste_icon_name__input taste_icon_middle">
+        </div><div class="taste_select_item">
+          <input type="file" class="taste_file_selector__input taste_icon_right" value=""/>
+          <input type="text" placeholder="input icon name" class="taste_icon_name__input taste_icon_right">
+        </div>
       </div>
     </div>
   </div>
@@ -85,16 +93,16 @@
     <div class="preview_taste_wrapper">
       <div class="preview_item">
         <img class="preview_icon"></img>
-        <span class="preview_icon_text">각설탕</span>
+        <span class="preview_icon_text icon_text_left">각설탕</span>
       </div>
       
       <div class="preview_item">
         <img class="preview_icon"></img>
-        <span class="preview_icon_text">청포도</span>
+        <span class="preview_icon_text icon_text_middle">청포도</span>
       </div>
       <div class="preview_item">
         <img class="preview_icon"></img>
-        <span class="preview_icon_text">오렌지</span>
+        <span class="preview_icon_text icon_text_right">오렌지</span>
       </div>
     </div>
   </div>
