@@ -64,8 +64,10 @@ var ColorHandler = function () {
     var LOCAL_STORAGE_BACKGROUND_COLOR_KEY = "backgroundColor";
     var LOCAL_STORAGE_FONT_COLOR_KEY = "fontColor";
     var colorPicker = document.getElementsByClassName("colorPicker");
+    var tasteFontColorPicker = document.getElementsByClassName("taste_text_color_picker");
     var previewButton = document.getElementById("preview_load__button");
     var previewContentWrapper = (document.getElementsByClassName("preview_content_wrapper")[0]);
+    var previewIconText = (document.getElementsByClassName("preview_icon_text"));
     var changeBackgroundColor = function () {
         var newBackgroundColor = colorPicker[0].value;
         previewContentWrapper.style.backgroundColor = newBackgroundColor;
@@ -75,6 +77,18 @@ var ColorHandler = function () {
         var newFontColor = colorPicker[1].value;
         previewContentWrapper.style.color = newFontColor;
         localStorage.setItem(LOCAL_STORAGE_FONT_COLOR_KEY, newFontColor);
+    };
+    var changeTasteFontColor = function () {
+        var _loop_1 = function (i) {
+            tasteFontColorPicker[i].addEventListener('change', function (event) {
+                var newFontColor = tasteFontColorPicker[i].value;
+                var iconText = previewIconText[i];
+                iconText.style.color = newFontColor;
+            });
+        };
+        for (var i = 0; i < tasteFontColorPicker.length; i++) {
+            _loop_1(i);
+        }
     };
     var init = function () {
         var prevBackgroundColor = localStorage.getItem(LOCAL_STORAGE_BACKGROUND_COLOR_KEY);
@@ -92,6 +106,7 @@ var ColorHandler = function () {
         changeBackgroundColor();
         changeFontColor();
     };
+    changeTasteFontColor();
     previewButton.addEventListener('click', handleShowPreview);
     init();
 };
@@ -127,10 +142,8 @@ var FruitIcon = function () {
             });
             iconNameList[i].addEventListener('change', function (event) {
                 var target = event.target;
-                console.log("target : " + target.value);
                 var iconName = preIconNameList[i];
                 iconName.innerText = target.value;
-                //preIconNameList[i].nodeValue = target.value;
             });
         };
         for (var i = 0; i < iconFileList.length; i++) {

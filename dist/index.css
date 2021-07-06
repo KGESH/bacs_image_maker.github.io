@@ -117,8 +117,10 @@ textarea {
   justify-content: space-around;
 }
 .preview_icon {
-  width: 80px;
-  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
   background-color: cornflowerblue;
 }
 
@@ -153,4 +155,11 @@ textarea {
 
 .taste_select_item {
   display: flex;
+}
+
+.preview_icon_text {
+  padding-top: 20px;
+  text-align: center;
+  
+  
 }

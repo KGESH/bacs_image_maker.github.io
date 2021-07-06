@@ -20,15 +20,15 @@
       <div class="sort">
         <div style="margin-right: 15px;">정렬</div>
         <div>
-          <input type="radio" class="preview_content_align__radio_button" value="left" checked>
+          <input type="radio" name="text_align" class="preview_content_align__radio_button" value="left" checked>
           <label for="a">좌측</label>
         </div>
         <div>
-          <input type="radio" class="preview_content_align__radio_button" value="center">
+          <input type="radio" name="text_align" class="preview_content_align__radio_button" value="center">
           <label for="b">가운데</label>
         </div>
         <div>
-          <input type="radio" class="preview_content_align__radio_button" value="right">
+          <input type="radio" name="text_align" class="preview_content_align__radio_button" value="right">
           <label for="c">우측</label>
         </div>
       </div>
@@ -51,6 +51,7 @@
             <label for="">label3</label>
           </div>
         </div>
+        <input type="text" placeholder="input icon name" class="taste_icon_name__input taste_name_left">
         -->
         <div><div>배경 색상</div><input class="colorPicker" value="#3399FF80" data-jscolor="{}"></div>
         <div><div>폰트 색상</div><input class="colorPicker" value="#3399FF80" data-jscolor="{}"></div>
@@ -59,14 +60,19 @@
       <div class="taste_select_wrapper">
         <div class="taste_select_item">
           <input type="file" class="taste_file_selector__input taste_icon_left" value=""/>
-          <input type="text" placeholder="input icon name" class="taste_icon_name__input taste_name_left">
+          <textarea placeholder="left icon" class="taste_icon_name__input taste_name_left"></textarea>
+          <div><div>폰트 색상</div><input class="taste_text_color_picker" value="#3399FF80" data-jscolor="{}"></div>
+
         </div>
         <div class="taste_select_item">
           <input type="file" class="taste_file_selector__input taste_icon_middle" value=""/>
-          <input type="text" placeholder="input icon name" class="taste_icon_name__input taste_icon_middle">
+          <textarea placeholder="middle icon" class="taste_icon_name__input taste_name_middle"></textarea>
+          <div><div>폰트 색상</div><input class="taste_text_color_picker" value="#3399FF80" data-jscolor="{}"></div>
+          
         </div><div class="taste_select_item">
           <input type="file" class="taste_file_selector__input taste_icon_right" value=""/>
-          <input type="text" placeholder="input icon name" class="taste_icon_name__input taste_icon_right">
+          <textarea placeholder="right icon" class="taste_icon_name__input taste_name_right"></textarea>
+          <div><div>폰트 색상</div><input class="taste_text_color_picker" value="#3399FF80" data-jscolor="{}"></div>
         </div>
       </div>
     </div>
@@ -93,16 +99,16 @@
     <div class="preview_taste_wrapper">
       <div class="preview_item">
         <img class="preview_icon"></img>
-        <span class="preview_icon_text icon_text_left">각설탕</span>
+        <span class="preview_icon_text icon_text_left">example</span>
       </div>
       
       <div class="preview_item">
         <img class="preview_icon"></img>
-        <span class="preview_icon_text icon_text_middle">청포도</span>
+        <span class="preview_icon_text icon_text_middle">example</span>
       </div>
       <div class="preview_item">
         <img class="preview_icon"></img>
-        <span class="preview_icon_text icon_text_right">오렌지</span>
+        <span class="preview_icon_text icon_text_right">example</span>
       </div>
     </div>
   </div>
