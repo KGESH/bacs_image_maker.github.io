@@ -123,11 +123,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 var FruitIcon = function () {
     var iconFileList = document.getElementsByClassName("taste_file_selector__input");
-    var iconNameList = document.getElementsByClassName("taste_icon_name__input");
-    var preIconNameList = document.getElementsByClassName("preview_icon_text");
+    var iconEnglishNameList = document.getElementsByClassName("taste_icon_english_name__input");
+    var iconKoreanNameList = document.getElementsByClassName("taste_icon_korean_name__input");
     var imageList = document.getElementsByClassName("preview_icon");
+    var preIconEnglishName = document.getElementsByClassName("icon_text_english__input");
+    var preIconKoreanName = document.getElementsByClassName("icon_text_korean__input");
     var attachFileSelectListener = function () {
         var _loop_1 = function (i) {
+            console.log("korean:");
+            console.log(iconEnglishNameList);
+            console.log("english");
+            console.log(iconKoreanNameList);
             iconFileList[i].addEventListener('change', function (event) {
                 var target = event.target;
                 var fileList = target.files;
@@ -140,9 +146,14 @@ var FruitIcon = function () {
                     reader.readAsDataURL(fileList[0]);
                 }
             });
-            iconNameList[i].addEventListener('change', function (event) {
+            iconEnglishNameList[i].addEventListener('change', function (event) {
                 var target = event.target;
-                var iconName = preIconNameList[i];
+                var iconName = preIconEnglishName[i];
+                iconName.innerText = target.value;
+            });
+            iconKoreanNameList[i].addEventListener('change', function (event) {
+                var target = event.target;
+                var iconName = preIconKoreanName[i];
                 iconName.innerText = target.value;
             });
         };
@@ -153,6 +164,37 @@ var FruitIcon = function () {
     attachFileSelectListener();
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FruitIcon);
+
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+var FontHandler = function () {
+    var fontSizeInputField = document.getElementsByClassName("theme_font_size__input");
+    var preTitle = document.getElementsByClassName("preview_title")[0];
+    var preDescription = document.getElementsByClassName("preview_description")[0];
+    var attachFontSizeChangeListener = function () {
+        // Preview Title
+        fontSizeInputField[0].addEventListener('change', function (event) {
+            var target = event.target;
+            var fontSize = target.value + "pt";
+            preTitle.style.fontSize = fontSize;
+        });
+        // Preview Description
+        fontSizeInputField[1].addEventListener('change', function (event) {
+            var target = event.target;
+            var fontSize = target.value + "pt";
+            preDescription.style.fontSize = fontSize;
+        });
+    };
+    attachFontSizeChangeListener();
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FontHandler);
 
 
 /***/ })
@@ -219,6 +261,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _InputText__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _ColorHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _FruitIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _FontHandler__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+
 
 
 
@@ -226,6 +270,7 @@ var App = function () {
     (0,_InputText__WEBPACK_IMPORTED_MODULE_0__.default)();
     (0,_ColorHandler__WEBPACK_IMPORTED_MODULE_1__.default)();
     (0,_FruitIcon__WEBPACK_IMPORTED_MODULE_2__.default)();
+    (0,_FontHandler__WEBPACK_IMPORTED_MODULE_3__.default)();
 };
 window.addEventListener('load', App);
 

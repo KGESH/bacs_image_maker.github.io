@@ -3,11 +3,15 @@
   src: url("./font/AppleSDGothicNeoB.ttf");
 }
 
+@font-face {
+  font-family: AppleSDGothicNeoM;
+  src: url("./font/AppleSDGothicNeoM.ttf")
+}
+
 body {
   display: flex;
   justify-content: center;
   background-color: #FFFFFE;
-  font-family: "AppleSDGothicNeoB";
   padding: 30px;
 }
 
@@ -106,8 +110,6 @@ textarea {
   width: 80%;
 }
 
-
-
 .preview_taste_wrapper {
   width: 50%;
   height: 100%;
@@ -116,12 +118,11 @@ textarea {
   align-items: center;
   justify-content: space-around;
 }
+
 .preview_icon {
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 160px;
   width: auto;
-  height: auto;
-  background-color: cornflowerblue;
+  height: 80px;
 }
 
 .controlBox_download {
@@ -160,6 +161,25 @@ textarea {
 .preview_icon_text {
   padding-top: 20px;
   text-align: center;
-  
-  
+  font-family: "AppleSDGothicNeoM";
+}
+
+.preview_title {
+  font-size: 21pt;
+  font-family: "AppleSDGothicNeoB";
+}
+.preview_description {
+  font-size: 15pt;
+  font-family: "AppleSDGothicNeoM";
+}
+
+.icon_text_english__input {
+  font-size: 25pt;
+  font-family: "AppleSDGothicNeoM";
+}
+
+.icon_text_korean__input {
+  font-size: 20pt;
+  font-family: "AppleSDGothicNeoM";
+  opacity: 0.9;
 }

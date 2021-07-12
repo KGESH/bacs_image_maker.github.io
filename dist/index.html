@@ -32,46 +32,35 @@
           <label for="c">우측</label>
         </div>
       </div>
+      <div class="font_size_feild">
+        <input class="theme_font_size__input" placeholder="Title Size(21)">
+        <input class="theme_font_size__input" placeholder="Description Size(15)">
+      </div>
     </div>
     <div class="coffeTaste">
       <div class="theme">
         <div>테마</div>
-        <!--
-        <div class="themeBtn">
-          <div>
-            <input type="radio" name="theme" checked>
-            <label for="">label1</label>
-          </div>
-          <div>
-            <input type="radio" name="theme">
-            <label for="">label2</label>
-          </div>
-          <div>
-            <input type="radio" name="theme">
-            <label for="">label3</label>
-          </div>
-        </div>
-        <input type="text" placeholder="input icon name" class="taste_icon_name__input taste_name_left">
-        -->
         <div><div>배경 색상</div><input class="colorPicker" value="#3399FF80" data-jscolor="{}"></div>
         <div><div>폰트 색상</div><input class="colorPicker" value="#3399FF80" data-jscolor="{}"></div>
-
       </div>
       <div class="taste_select_wrapper">
         <div class="taste_select_item">
           <input type="file" class="taste_file_selector__input taste_icon_left" value=""/>
-          <textarea placeholder="left icon" class="taste_icon_name__input taste_name_left"></textarea>
+          <textarea placeholder="left english" class="taste_icon_english_name__input taste_name_left"></textarea>
+          <textarea placeholder="left korean" class="taste_icon_korean_name__input taste_name_left"></textarea>
           <div><div>폰트 색상</div><input class="taste_text_color_picker" value="#3399FF80" data-jscolor="{}"></div>
 
         </div>
         <div class="taste_select_item">
           <input type="file" class="taste_file_selector__input taste_icon_middle" value=""/>
-          <textarea placeholder="middle icon" class="taste_icon_name__input taste_name_middle"></textarea>
+          <textarea placeholder="middle english" class="taste_icon_english_name__input taste_name_middle"></textarea>
+          <textarea placeholder="middle korean" class="taste_icon_korean_name__input taste_name_middle"></textarea>
           <div><div>폰트 색상</div><input class="taste_text_color_picker" value="#3399FF80" data-jscolor="{}"></div>
           
         </div><div class="taste_select_item">
           <input type="file" class="taste_file_selector__input taste_icon_right" value=""/>
-          <textarea placeholder="right icon" class="taste_icon_name__input taste_name_right"></textarea>
+          <textarea placeholder="right english" class="taste_icon_english_name__input taste_name_right"></textarea>
+          <textarea placeholder="right korean" class="taste_icon_korean_name__input taste_name_right"></textarea>
           <div><div>폰트 색상</div><input class="taste_text_color_picker" value="#3399FF80" data-jscolor="{}"></div>
         </div>
       </div>
@@ -88,27 +77,31 @@
   <div id="preview_container" class="preview_container">
     <div class="preview_content_wrapper">
       <div class="preTitle_content">
-        <h2 class="preview_title">ETHIOPIA GEDEB CHELCHELE NATURAL</h2>
+        <span class="preview_title">ETHIOPIA GEDEB CHELCHELE NATURAL</span>
         <div>
           <img class="lineImg" src="./image/middle_line.png"/>
         </div>
-        <h4 class="preview_description">에티오피아 게뎁 첼첼레는<br>파인애플과 블루베리의 상큼달콤한 향이<br>매력적인 커피입니다.
-          <br><br>내추럴 프로세싱을 통해 과일의 향을 살렸으며<br>밝고 화사한 커피를 좋아하시는 분들께 추천드립니다.</h4>
+        <span class="preview_description">에티오피아 게뎁 첼첼레는<br>파인애플과 블루베리의 상큼달콤한 향이<br>매력적인 커피입니다.
+          <br><br>내추럴 프로세싱을 통해 과일의 향을 살렸으며<br>밝고 화사한 커피를 좋아하시는 분들께 추천드립니다.</span>
       </div>
     </div>
     <div class="preview_taste_wrapper">
+
       <div class="preview_item">
         <img class="preview_icon"></img>
-        <span class="preview_icon_text icon_text_left">example</span>
+        <span class="preview_icon_text icon_text_english__input">example</span>
+        <span class="preview_icon_text icon_text_korean__input">예시</span>
       </div>
       
       <div class="preview_item">
         <img class="preview_icon"></img>
-        <span class="preview_icon_text icon_text_middle">example</span>
+        <span class="preview_icon_text icon_text_english__input">example</span>
+        <span class="preview_icon_text icon_text_korean__input">예시</span>
       </div>
       <div class="preview_item">
         <img class="preview_icon"></img>
-        <span class="preview_icon_text icon_text_right">example</span>
+        <span class="preview_icon_text icon_text_english__input">example</span>
+        <span class="preview_icon_text icon_text_korean__input">예시</span>
       </div>
     </div>
   </div>
