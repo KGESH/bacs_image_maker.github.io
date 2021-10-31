@@ -5,7 +5,7 @@ var ColorHandler = function () {
     var tasteFontColorPicker = document.getElementsByClassName("taste_text_color_picker");
     var previewButton = document.getElementById("preview_load__button");
     var previewContentWrapper = (document.getElementsByClassName("preview_content_wrapper")[0]);
-    var previewIconText = (document.getElementsByClassName("preview_icon_text"));
+    var previewIconText = document.getElementsByClassName("preview_icon_text");
     var changeBackgroundColor = function () {
         var newBackgroundColor = colorPicker[0].value;
         previewContentWrapper.style.backgroundColor = newBackgroundColor;
@@ -18,7 +18,7 @@ var ColorHandler = function () {
     };
     var changeTasteFontColor = function () {
         var _loop_1 = function (i) {
-            tasteFontColorPicker[i].addEventListener('change', function (event) {
+            tasteFontColorPicker[i].addEventListener("change", function (event) {
                 var newFontColor = tasteFontColorPicker[i].value;
                 var iconText = previewIconText[i];
                 iconText.style.color = newFontColor;
@@ -45,7 +45,7 @@ var ColorHandler = function () {
         changeFontColor();
     };
     changeTasteFontColor();
-    previewButton.addEventListener('click', handleShowPreview);
+    previewButton.addEventListener("click", handleShowPreview);
     init();
 };
 export default ColorHandler;

@@ -17,7 +17,7 @@ var InputText = function () {
     var previewButton = document.getElementById("preview_load__button");
     var preTitle = document.getElementsByClassName("preview_title")[0];
     var preDescription = document.getElementsByClassName("preview_description")[0];
-    var sort = function () {
+    var alignContents = function () {
         var alignButtonList = document.getElementsByClassName("preview_content_align__radio_button");
         for (var i = 0; i < alignButtonList.length; i++) {
             var alignButton = alignButtonList[i];
@@ -42,7 +42,7 @@ var InputText = function () {
     var paint = function () {
         localStorage.setItem(LOCAL_STORAGE_TITLE_KEY, title.value);
         localStorage.setItem(LOCAL_STORAGE_DESCRIPTION_KEY, description.value);
-        sort();
+        alignContents();
         preTitle.innerText = title.value;
         preDescription.innerText = description.value;
     };
