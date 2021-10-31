@@ -1,5 +1,5 @@
 var FruitIcon = function () {
-    var iconFileList = document.getElementsByClassName("taste_file_selector__input");
+    var iconFileList = document.getElementsByClassName("  q");
     var iconEnglishNameList = document.getElementsByClassName("taste_icon_english_name__input");
     var iconKoreanNameList = document.getElementsByClassName("taste_icon_korean_name__input");
     var imageList = document.getElementsByClassName("preview_icon");

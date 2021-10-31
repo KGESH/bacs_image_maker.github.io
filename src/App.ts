@@ -8,7 +8,6 @@ const App = () => {
   ColorHandler();
   FruitIcon();
   FontHandler();
-}
+};
 
-window.addEventListener('load', App);
-
+window.addEventListener("load", App);
